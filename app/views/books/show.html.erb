@@ -1,0 +1,9 @@
+<h1><%=@book.title%></h1>
+<%@book.authors.each do |author| %>
+<li><%=@book.author.to_s%></li>
+<%end%>
+<p><%=@book.description%></p>
+
+<%= link_to "Edit Book", edit_book_path(@book) %>
+<%= link_to "All The Books", books_path %>
+<%= button_to "DESTROY", {@book}, method: :delete%>
